@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  rating: 1
+  comments: MyString
+  date: 2020-01-30
+  user: one
+  plant: one
+  seller: one
+
+two:
+  title: MyString
+  rating: 1
+  comments: MyString
+  date: 2020-01-30
+  user: two
+  plant: two
+  seller: two
