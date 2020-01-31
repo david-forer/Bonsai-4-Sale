@@ -1,0 +1,27 @@
+<h1> Create a New Plant</h1>
+
+<!-- form for plant creation -->
+
+<%= form_for(@plant) do |f| %>
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+
+    <div>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+    </div>
+
+    <div>
+        <%= f.label :price %>
+        <%= f.number_field :price %>
+    </div>
+
+    
+
+<%= f.submit "Add a Plant" %>
+
+
+<% end %>
+

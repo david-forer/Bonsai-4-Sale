@@ -1,0 +1,22 @@
+All Users Listed Below
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Location</th>
+            <th colspan="3"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @users.each do |user| %>
+        <tr>
+            <td><%= user.name %></td>
+            <td><%= user.username %></td>
+            <td><%= user.location %> </td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

@@ -1,0 +1,19 @@
+<h1> Sign Up to Sell Bonsai Plants</h1>
+
+<%= form_for(@seller) do |s| %>
+
+<%= s.label :email_address %>
+<%= s.email_field :email_address %>
+
+<%= s.label :name %>
+<%= s.text_field :name %>
+
+<%= s.label :password %>
+<%= s.password_field :password %>
+
+<%= s.label :location %>
+<%= s.text_field :location %>
+
+<%= s.submit "Sign Up to Sell" %>
+
+<% end %>

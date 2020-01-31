@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_30_073559) do
+ActiveRecord::Schema.define(version: 2020_01_31_093338) do
 
   create_table "plants", force: :cascade do |t|
     t.string "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2020_01_30_073559) do
     t.integer "seller_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "plant_id"
     t.index ["seller_id"], name: "index_plants_on_seller_id"
   end
 
@@ -45,6 +46,8 @@ ActiveRecord::Schema.define(version: 2020_01_30_073559) do
     t.string "location"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "seller_id"
+    t.string "password_digest"
   end
 
   create_table "users", force: :cascade do |t|
