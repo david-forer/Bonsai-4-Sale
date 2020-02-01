@@ -12,8 +12,8 @@ end
 
 
 def create 
-    @plant = Plant.create(plant_params)
-    # @plant.seller_id = session[:user_id]
+    @plant = Plant.new(plant_params)
+     @plant.seller_id = session[:seller_id]
     if @plant.save
         session[:plant_id] = @plant.id
         redirect_to plant_path(@plant)
@@ -23,7 +23,7 @@ def create
 end
 
 def show 
-    @plant = Plant.find_by_id(params[:plant_id])
+    @plant = Plant.find_by(params[:plant_id])
     redirect_to '/' if !@plant
 end
 

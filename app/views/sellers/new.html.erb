@@ -2,6 +2,9 @@
 
 <%= form_for(@seller) do |s| %>
 
+<%= s.label :username %>
+<%= s.text_field :username %>
+
 <%= s.label :email_address %>
 <%= s.email_field :email_address %>
 

@@ -1,0 +1,26 @@
+<h1>A List of Sellers</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="1" width="150">Name      </thcolspan="3" width="150">
+            <th colspan="1" width="150">Location    </th>
+            <th colspan="1" width="150">Email Address       </th>
+            <th colspan="1" width="100">Seller_id    </th>
+            <th colspan="1" width="100">Seller Username     </th>
+            <th colspan="5"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @sellers.each do |seller| %>
+        <tr>
+            <td colspan="1" width="150">  <%= seller.name %></td>
+            <td colspan="1" width="150">  <%= seller.location %></td>
+            <td colspan="1" width="150">  <%= seller.email_address %></td>
+            <td colspan="1" width="100">  <%= seller.id%></td>
+            <td colspan="1" width="100">  <%= seller.username%></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
