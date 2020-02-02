@@ -1,0 +1,15 @@
+<h1>Sellers login</h1>
+<br>
+
+<%= form_for(:seller) do |s| %>
+
+<%= s.label :email_address %>
+<%= s.email_field :email_address %>
+
+<%= s.label :password %>
+<%= s.password_field :password %>
+
+<%= s.submit "Seller Log In" %>
+
+<% end %>
+

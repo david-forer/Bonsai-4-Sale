@@ -1,0 +1,22 @@
+<h1>Fill out your review below</h1>
+<br>
+<br>
+
+<%= form_for(@rating) do |r| %>
+    <%= r.label :title %>
+    <%= r.text_field :title %>
+    
+    <%= r.label :rating %>
+    <%= r.number_field :rating, min:0, max:5 %>
+
+    <%= r.label :comments %>
+    <%= r.text_area :comments %>
+    
+    <%= r.label :date %>
+    <%= r.text_field :date %>
+
+    <%= r.hidden_field :plant_id %>
+
+    <%= r.submit %>
+
+<% end %>

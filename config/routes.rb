@@ -7,11 +7,14 @@ Rails.application.routes.draw do
   post '/signup' => 'users#create'
   delete '/logout' => 'sessions#destroy'
   
-   
+  get '/sellers/login' => 'sellers#login', :as => :create_login
+  post 'sellers/login' => 'sellers#login'
 
   resources :ratings
   resources :sellers
-  resources :plants
+  resources :plants do 
+    resources :ratings, only: [:new, :index]
+  end
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_02_01_005236) do
     t.string "name"
     t.string "description"
     t.integer "price"
-    t.boolean "availablity"
+    t.boolean "availability"
     t.string "pictures"
     t.integer "seller_id", null: false
     t.datetime "created_at", precision: 6, null: false

@@ -23,14 +23,14 @@ def create
 end
 
 def show 
-    @plant = Plant.find_by(params[:plant_id])
+    @plant = Plant.find_by_id(params[:id])
     redirect_to '/' if !@plant
 end
 
 private
 
   def plant_params
-    params.require(:plant).permit(:name, :description, :seller_id, :plant_id, :price)
+    params.require(:plant).permit(:name, :description, :seller_id, :plant_id)
   end
 
 
